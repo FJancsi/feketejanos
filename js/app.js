@@ -1,3 +1,1 @@
-/**
- * Created by janos.fekete on 2016.02.05..
- */
+angular.module("webApp", []);
