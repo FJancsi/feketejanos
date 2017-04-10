@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" data-framework="angularjs">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preload" href="assets/style/app.css" />
-    <script src="assets/libs/requirejs/require.js" data-main="require_config.js"></script>
-    <title>Family Budget</title>
-</head>
-<body data-ng-cloak>
-    <div ng-view></div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="assets/libs/angular-material/angular-material.min.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="assets/style/app.css"/>
+        <script src="assets/libs/requirejs/require.js" data-main="require_config.js"></script>
+        <title>Family Budget</title>
+    </head>
+    <body data-ng-cloak>
+        <md-content class="md-padding">
+            <md-nav-bar>
+                <md-nav-item md-nav-href="#income" name="income">Income</md-nav-item>
+                <md-nav-item md-nav-href="#outcome" name="outcome">Outcome</md-nav-item>
+                <md-nav-item md-nav-href="#sum" name="sum">Summary</md-nav-item>
+            </md-nav-bar>
+        </md-content>
+        <div ng-view></div>
+    </body>
 </html>

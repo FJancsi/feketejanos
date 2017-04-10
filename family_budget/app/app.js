@@ -1,11 +1,12 @@
 define([
     'angular',
     'ngRoute',
-    'ngAnimate'
+    'ngAnimate',
+    'ngMaterial'
 ], function (angular, ngRoute, ngAnimate) {
     'use strict';
 
-    return angular.module('spaApp', ['ngRoute','ngAnimate'])
+    return angular.module('familyBudget', ['ngRoute','ngAnimate','ngMaterial'])
         .config(['$compileProvider', '$routeProvider', function ($compileProvider, $routeProvider) {
             $compileProvider.debugInfoEnabled(false);
 
@@ -17,9 +18,6 @@ define([
                     template: '<div></div>'
                 })
                 .when('/sum', {
-                    template: '<div></div>'
-                })
-                .otherwise({
                     template: '<div></div>'
                 });
         }])

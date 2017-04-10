@@ -22,6 +22,7 @@
     "lodash": "~4.15.0",
     "angular-route": "",
     "text": "requirejs/text#^2.0.15",
-    "angular-animate": ""
+    "angular-animate": "",
+    "angular-material": "1.1.3"
   }
 }
