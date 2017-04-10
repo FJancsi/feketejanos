@@ -1,0 +1,27 @@
+{
+  "name": "family_budget",
+  "description": "Family budget application",
+  "main": "index.html",
+  "authors": ["Janos Fekete"],
+  "license": "MIT",
+  "keywords": [
+    "family",
+    "budget"
+  ],
+  "moduleType": [],
+  "homepage": "feketejanos.xyz/family_budget",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "angular": "^1.6",
+    "requirejs": "^2.2.0",
+    "lodash": "~4.15.0",
+    "angular-route": "",
+    "text": "requirejs/text#^2.0.15",
+    "angular-animate": ""
+  }
+}
