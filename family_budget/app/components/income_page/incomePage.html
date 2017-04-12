@@ -1,1 +1,15 @@
-<div>income</div>
+<div layout="column" ng-cloak class="md-inline-form">
+    <md-content layout-gt-sm="row" layout-padding>
+        <div>
+            <md-input-container>
+                <label>Név</label>
+                <input ng-model="vm.name">
+            </md-input-container>
+            <md-input-container>
+                <label>Fizetés</label>
+                <input ng-model="vm.salary">
+            </md-input-container>
+            <md-button class="md-raised md-primary">Hozzáad</md-button>
+        </div>
+    </md-content>
+</div>
