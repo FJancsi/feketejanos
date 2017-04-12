@@ -3,11 +3,12 @@ define([
     'ngRoute',
     'ngAnimate',
     'ngMaterial',
+    'ngMessages',
     'components/income_page/incomePage'
-], function (angular, ngRoute, ngAnimate, ngMaterial, incomePage) {
+], function (angular, ngRoute, ngAnimate, ngMaterial, ngMessages, incomePage) {
     'use strict';
 
-    return angular.module('familyBudget', [incomePage, 'ngRoute','ngAnimate','ngMaterial'])
+    return angular.module('familyBudget', [incomePage, 'ngRoute', 'ngAnimate', 'ngMaterial', 'ngMessages'])
         .config(['$compileProvider', '$routeProvider', '$locationProvider', function ($compileProvider, $routeProvider, $locationProvider) {
             $compileProvider.debugInfoEnabled(false);
             $locationProvider.hashPrefix('');

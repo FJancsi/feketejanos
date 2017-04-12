@@ -1,15 +1,42 @@
 <div layout="column" ng-cloak class="md-inline-form">
     <md-content layout-gt-sm="row" layout-padding>
-        <div>
-            <md-input-container>
-                <label>Név</label>
-                <input ng-model="vm.name">
-            </md-input-container>
-            <md-input-container>
-                <label>Fizetés</label>
-                <input ng-model="vm.salary">
-            </md-input-container>
-            <md-button class="md-raised md-primary">Hozzáad</md-button>
+        <div flex>
+            <form name="salaryForm">
+                <md-input-container>
+                    <label>Név</label>
+                    <input ng-model="vm.name" name="name" required>
+                    <div ng-messages="salaryForm.name.$error" role="alert" multiple>
+                        <div ng-message="required" class="my-message">Név megadása kötelező!</div>
+                    </div>
+                </md-input-container>
+                <md-input-container>
+                    <label>Fizetés</label>
+                    <input ng-model="vm.salary" type="number" step="1" name="salary" required>
+                    <div ng-messages="salaryForm.salary.$error" role="alert">
+                        <div ng-message="required" class="my-message">Fizetés megadása kötelező!</div>
+                    </div>
+                </md-input-container>
+                <md-input-container>
+                    <label>Dátum</label>
+                    <md-datepicker ng-model="vm.salaryDate" required></md-datepicker>
+                </md-input-container>
+                <md-button type="submit" class="md-raised md-primary" ng-click="vm.addIncome(vm.name, vm.salary, vm.salaryDate)">
+                    Hozzáad
+                </md-button>
+            </form>
+            <md-list>
+                <md-subheader class="md-no-sticky">Bevételek</md-subheader>
+                <md-list-item ng-repeat="salary in vm.salaries">
+                    <div class="md-list-item-text">
+                        <h3> {{salary.name}} </h3>
+                        <h4> {{salary.date | date:'yyyy-MM-dd'}} </h4>
+                        <p> {{salary.salary}} </p>
+                    </div>
+                    <md-button class="md-secondary" ng-click="vm.removeIncome($index)">Töröl</md-button>
+                    <md-divider></md-divider>
+                </md-list-item>
+                <p>Összesen:</p>&nbsp;<p>{{vm.grossSalary}}</p>
+            </md-list>
         </div>
     </md-content>
 </div>
