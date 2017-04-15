@@ -1,0 +1,15 @@
+{
+  "MAIN_PAGE_TITLE": "Family Budget",
+  "MAIN_PAGE_INCOME": "Income",
+  "MAIN_PAGE_OUTCOME": "Outcome",
+  "MAIN_PAGE_SUMMARY": "Summary",
+  "INCOME_PAGE_NAME": "Name",
+  "INCOME_PAGE_SALARY": "Salary",
+  "INCOME_PAGE_DATE": "Date",
+  "INCOME_PAGE_ADD": "Add",
+  "INCOME_PAGE_INCOMES": "Incomes",
+  "INCOME_PAGE_DELETE": "Delete",
+  "INCOME_PAGE_TOTAL": "Total",
+  "INCOME_PAGE_NAME_ERROR": "Please set the name!",
+  "INCOME_PAGE_SALARY_ERROR": "Please set the salary!"
+}

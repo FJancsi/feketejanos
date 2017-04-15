@@ -8,7 +8,7 @@ define(['_'], function(_) {
         vm.removeIncome = removeIncome;
         
         function addIncome(name, salary, date) {
-            if(!name || !salary || !date) return;
+            if(!name || !salary || !date) {return;}
 
             vm.salaries.push({name: name, salary: salary, date: date});
             sumIncome();

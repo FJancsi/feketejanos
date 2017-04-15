@@ -10,7 +10,11 @@ require.config({
         'ngAnimate': './assets/libs/angular-animate/angular-animate',
         'ngAria': './assets/libs/angular-aria/angular-aria',
         'ngMessages': './assets/libs/angular-messages/angular-messages',
-        'ngMaterial': './assets/libs/angular-material/angular-material'
+        'ngMaterial': './assets/libs/angular-material/angular-material',
+        'ngTranslate': './assets/libs/angular-translate/angular-translate',
+        'ngCookies': './assets/libs/angular-cookies/angular-cookies',
+        'ngTranslateCookies': './assets/libs/angular-translate-storage-cookie/angular-translate-storage-cookie',
+        'ngTranslateStaticFileLoader': './assets/libs/angular-translate-loader-static-files/angular-translate-loader-static-files'
     },
     shim: {
         'angular': {'exports': 'angular'},
@@ -19,9 +23,11 @@ require.config({
         'ngAnimate': {'deps': ['angular']},
         'ngAria': ['angular'],
         'ngMessages': ['angular'],
-        'ngMaterial': {
-            deps: ['ngAnimate', 'ngAria', 'ngMessages']
-        }
+        'ngMaterial': {'deps': ['ngAnimate', 'ngAria', 'ngMessages']},
+        'ngTranslate' : {'deps': ['angular']},
+        'ngCookies': {'deps': ['angular']},
+        'ngTranslateCookies': {'deps': ['ngTranslate', 'ngCookies']},
+        'ngTranslateStaticFileLoader' : {'deps': ['ngTranslate']}
     },
     priority: ['angular'],
     deps: ['app']
