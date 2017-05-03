@@ -1,0 +1,161 @@
+@import "https://fonts.googleapis.com/css?family=Orbitron";
+/*
+
+    Glitchy Text from https://css-tricks.com/glitch-effect-text-images-svg/
+
+  (TEXT) PARAMS
+  =================
+  1. Namespace
+  2. Intensity
+  3. Text color
+  4. Background color (flat)
+  5. Highlight #1 color
+  6. Highlight #2 color
+  7. Width (px)
+  8. Height (px)
+*/
+html, body {
+    background-color: #000;
+    text-align: center;
+    padding: 10%;
+}
+
+.content {
+    color: #62C85B;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 100px;
+    font-weight: bold;
+    color: #61F5A1;
+    position: relative;
+}
+@keyframes glitch-anim-1 {
+    0% {
+        clip: rect(59px, 1084px, 58px, 0);
+    }
+    5.88235% {
+        clip: rect(39px, 1084px, 45px, 0);
+    }
+    11.76471% {
+        clip: rect(109px, 1084px, 87px, 0);
+    }
+    17.64706% {
+        clip: rect(41px, 1084px, 34px, 0);
+    }
+    23.52941% {
+        clip: rect(18px, 1084px, 3px, 0);
+    }
+    29.41176% {
+        clip: rect(25px, 1084px, 102px, 0);
+    }
+    35.29412% {
+        clip: rect(24px, 1084px, 111px, 0);
+    }
+    41.17647% {
+        clip: rect(24px, 1084px, 75px, 0);
+    }
+    47.05882% {
+        clip: rect(24px, 1084px, 85px, 0);
+    }
+    52.94118% {
+        clip: rect(5px, 1084px, 108px, 0);
+    }
+    58.82353% {
+        clip: rect(56px, 1084px, 96px, 0);
+    }
+    64.70588% {
+        clip: rect(11px, 1084px, 88px, 0);
+    }
+    70.58824% {
+        clip: rect(28px, 1084px, 57px, 0);
+    }
+    76.47059% {
+        clip: rect(36px, 1084px, 54px, 0);
+    }
+    82.35294% {
+        clip: rect(59px, 1084px, 59px, 0);
+    }
+    88.23529% {
+        clip: rect(66px, 1084px, 82px, 0);
+    }
+    94.11765% {
+        clip: rect(68px, 1084px, 55px, 0);
+    }
+    100% {
+        clip: rect(110px, 1084px, 76px, 0);
+    }
+}
+@keyframes glitch-anim-2 {
+    0% {
+        clip: rect(37px, 1084px, 42px, 0);
+    }
+    5.88235% {
+        clip: rect(39px, 1084px, 45px, 0);
+    }
+    11.76471% {
+        clip: rect(97px, 1084px, 97px, 0);
+    }
+    17.64706% {
+        clip: rect(58px, 1084px, 105px, 0);
+    }
+    23.52941% {
+        clip: rect(97px, 1084px, 62px, 0);
+    }
+    29.41176% {
+        clip: rect(48px, 1084px, 70px, 0);
+    }
+    35.29412% {
+        clip: rect(34px, 1084px, 66px, 0);
+    }
+    41.17647% {
+        clip: rect(84px, 1084px, 8px, 0);
+    }
+    47.05882% {
+        clip: rect(66px, 1084px, 93px, 0);
+    }
+    52.94118% {
+        clip: rect(92px, 1084px, 63px, 0);
+    }
+    58.82353% {
+        clip: rect(94px, 1084px, 34px, 0);
+    }
+    64.70588% {
+        clip: rect(104px, 1084px, 113px, 0);
+    }
+    70.58824% {
+        clip: rect(1px, 1084px, 89px, 0);
+    }
+    76.47059% {
+        clip: rect(87px, 1084px, 12px, 0);
+    }
+    82.35294% {
+        clip: rect(79px, 1084px, 17px, 0);
+    }
+    88.23529% {
+        clip: rect(45px, 1084px, 77px, 0);
+    }
+    94.11765% {
+        clip: rect(52px, 1084px, 13px, 0);
+    }
+    100% {
+        clip: rect(41px, 1084px, 30px, 0);
+    }
+}
+.content:before, .content:after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    clip: rect(0, 0, 0, 0);
+}
+.content:after {
+    left: 2px;
+    text-shadow: -1px 0 red;
+    animation: glitch-anim-1 2s infinite linear alternate-reverse;
+}
+.content:before {
+    left: -2px;
+    text-shadow: 2px 0 blue;
+    animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
