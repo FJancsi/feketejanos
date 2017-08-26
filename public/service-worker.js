@@ -5,6 +5,7 @@
 		'.',
 		'style.css',
 		'index.html',
+		'favicon.ico',
 		'pages/404.html',
 		'pages/offline.html',
 		'app/app.js',
