@@ -5,7 +5,8 @@
 		'.',
 		'style.css',
 		'index.html',
-		'404.html',
+		'pages/404.html',
+		'pages/offline.html',
 		'app/app.js',
 		'https://fonts.googleapis.com/css?family=Orbitron'
 	];
@@ -56,7 +57,7 @@
 					return fetch(event.request)
 						.then(response => {
 							if (response.status === 404) {
-								return caches.match('404.html');
+								return caches.match('pages/404.html');
 							}
 							return caches.open(staticCacheName)
 								.then(cache => {
@@ -66,7 +67,7 @@
 				})
 				.catch(error => {
 					console.log(`Error: ${error}`);
-					return caches.match('offline.html');
+					return caches.match('pages/offline.html');
 				})
 		);
 	});
