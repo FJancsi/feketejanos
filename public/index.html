@@ -28,7 +28,19 @@
 </head>
 <body>
 	<div class="content" data-text="Front-End Fun">Front-End Fun</div>
+	<div class="section">
+		<fieldset disabled="disabled">
+			<legend>Contact:</legend>
+			<span>fekete.janos2@gmail.com</span>
+		</fieldset>
+	</div>
+	<div class="section">
+		<fieldset disabled="disabled">
+			<legend>My git repositories</legend>
+			<div class="section-container git-repos"></div>
+		</fieldset>
+	</div>
 </body>
 	<script async src="app/app.js"></script>
-	<script async src="app/service.js"></script>
+	<script async src="app/fetch/getGitRepos.js"></script>
 </html>

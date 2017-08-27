@@ -1,7 +1,13 @@
 (function () {
 	'use strict';
+
 	const repoName = 'FJancsi';
 	let repos = [];
+
+	if (!('fetch' in window)) {
+		console.log('Fetch API not found, try including the polyfill');
+		return;
+	}
 
 	const logResult = results => {
 		results.forEach(function(result) {
@@ -31,12 +37,33 @@
 
 		return repos;
 	};
+	const appendToDOM = elements => {
+		let $container = document.querySelector('.section-container, .git-repos');
+
+		elements.forEach(element => {
+			createDOMAndAppendToParent($container, element);
+		});
+
+		return elements;
+	};
+	const createDOMAndAppendToParent = (parent, element) => {
+		let $element = document.createElement('div');
+		for (let prop in element) {
+			let $elementContentContainer = document.createElement('p');
+			let $elementContent = document.createTextNode(`${element[prop]}`);
+
+			$elementContentContainer.appendChild($elementContent);
+			$element.appendChild($elementContentContainer);
+		}
+		parent.appendChild($element);
+	};
 
 	const fetchRepos = repoName => {
 		fetch(`https://api.github.com/users/${repoName}/repos?type=owner`)
 			.then(validateResponse)
 			.then(responseAsJSON)
 			.then(mapResponse)
+			.then(appendToDOM)
 			.then(logResult)
 			.catch(logError);
 	};

@@ -12,7 +12,7 @@
 		'https://fonts.googleapis.com/css?family=Orbitron'
 	];
 
-	const staticCacheName = 'pages-cache-v2';
+	const staticCacheName = 'pages-cache-v3';
 	const notToCache = 'https://api.github.com';
 
 	self.addEventListener('install', event => {

@@ -17,8 +17,19 @@
 html, body {
     background-color: #000;
     text-align: center;
-    padding: 10%;
+    padding: 3%;
     overflow: hidden;
+}
+
+fieldset, legend {
+	color: #62C85B;
+	font-family: 'Orbitron', sans-serif;
+	font-size: 3vw;
+}
+
+fieldset > span {
+	color: white;
+	font-size: 2vw;
 }
 
 .content {
@@ -28,6 +39,26 @@ html, body {
     font-weight: bold;
     position: relative;
 }
+
+.section {
+	margin: 10px;
+}
+
+.section .section-container {
+	display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.section .section-container > div {
+	color: white;
+	font-size: 1.5vw;
+	padding-left: 5px;
+    padding-right: 5px;
+    box-sizing: border-box;
+}
+
 @keyframes glitch-anim-1 {
     0% {
         clip: rect(59px, 1084px, 58px, 0);
