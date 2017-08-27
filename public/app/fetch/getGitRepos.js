@@ -1,14 +1,8 @@
 (function () {
 	'use strict';
 
-	const repoName = 'FJancsi';
 	let repos = [];
-
-	if (!('fetch' in window)) {
-		console.log('Fetch API not found, try including the polyfill');
-		return;
-	}
-
+	const repoName = 'FJancsi';
 	const logResult = results => {
 		results.forEach(function(result) {
 			console.log(`RepoName: ${result.repoName}`);
