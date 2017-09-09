@@ -10,7 +10,7 @@
 	<link rel="manifest" href="manifest.json">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<title>feketejanos</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style/app.css">
 	<!-- Chrome for Android theme color -->
 	<meta name="theme-color" content="#2E3AA1">
 	<!-- Add to homescreen for Chrome on Android -->
@@ -41,7 +41,6 @@
 		</fieldset>
 	</div>
 </body>
-	<script async src="app/app.js"></script>
-	<script async src="app/indexedDB/idb.js"></script>
-	<script async src="app/fetch/getGitRepos.js"></script>
+	<script async type="module" src="app/app.js"></script>
+	<script nomodule src="app/fallback.js"></script>
 </html>

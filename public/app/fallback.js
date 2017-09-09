@@ -1,9 +1,5 @@
-import fetchApi from './fetch/fetchApi.js';
-
 (function () {
 	'use strict';
-
-	const repoName = 'FJancsi';
 
 	if (!('indexedDB' in window)) {
 		console.log('This browser doesn\'t support IndexedDB');
@@ -28,5 +24,4 @@ import fetchApi from './fetch/fetchApi.js';
 			console.log(`Registration failed: ${error}`);
 		});
 
-	fetchApi.fetchGitRepos(repoName);
 })();
