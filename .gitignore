@@ -3,3 +3,4 @@ node_modules/
 bower_components/
 /family_budget/app/assets/libs/
 /family_budget/app/assets/style/*.css
+.vscode/launch.json
