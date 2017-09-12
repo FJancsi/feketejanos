@@ -85,12 +85,12 @@
 
 	var fetchGitRepos = function (repoName) {
 		fetch('https://api.github.com/users/' + repoName + '/repos?type=owner')
-			.then(fetchUtils.validateResponse)
-			.then(fetchUtils.responseAsJSON)
+			.then(validateResponse)
+			.then(responseAsJSON)
 			.then(mapResponse)
-			.then(appendToDOM)
-			.then(fetchUtils.logResult)
-			.catch(fetchUtils.logError);
+			//.then(appendToDOM)
+			.then(logResult)
+			.catch(logError);
 	};
 
 	fetchGitRepos(repoName);

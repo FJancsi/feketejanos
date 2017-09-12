@@ -42,7 +42,7 @@ let fetchGitRepos = repoName => {
 		.then(fetchUtils.validateResponse)
 		.then(fetchUtils.responseAsJSON)
 		.then(mapResponse)
-		.then(appendToDOM)
+		//.then(appendToDOM)
 		.then(fetchUtils.logResult)
 		.catch(fetchUtils.logError);
 };
